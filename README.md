@@ -32,18 +32,27 @@ The app demonstrates secure user authentication, session management, encrypted l
 
 ## 🧩 Architecture Overview
 data/
+
 ├─ network/ # (Retrofit for API calls)
+
 ├─ storage/ # Secure token storage using EncryptedSharedPreferences
+
 └─ repository/ # Implementation of domain repositories
 
 domain/
+
 ├─ model/ # Core data models (User, Auth data, etc.)
+
 ├─ repository/ # Repository interfaces
+
 └─ usecase/ # Business logic (Login, Logout, GetCurrentUser)
 
 presentation/
+
 ├─ mvi/ # ViewModel, State, Intent, and Effect classes
+
 ├─ screens/ # Compose UI screens (LoginScreen, HomeScreen)
+
 └─ navigation/ # AppNavHost and route definitions
 
 **Navigation Flow**
