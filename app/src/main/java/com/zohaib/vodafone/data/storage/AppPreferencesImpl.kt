@@ -8,7 +8,7 @@ import com.zohaib.vodafone.domain.repository.SecureStorage
 class AppPreferencesImpl(context: Context) : SecureStorage {
 
     private val prefs: SharedPreferences =
-        context.getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+        context.getSharedPreferences("app_prefs_unsecured", Context.MODE_PRIVATE)
 
     override fun saveUser(user: User) {
 

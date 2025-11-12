@@ -1,6 +1,7 @@
 package com.zohaib.vodafone.di
 
 import com.google.gson.Gson
+import com.zohaib.vodafone.common.Constants
 import com.zohaib.vodafone.data.api.AuthApi
 import dagger.Module
 import dagger.Provides
@@ -33,7 +34,7 @@ object NetworkModule {
     @Singleton
     fun provideRetrofit(client: OkHttpClient, gson: Gson): Retrofit =
         Retrofit.Builder()
-            .baseUrl("https://dummyjson.com/")
+            .baseUrl(Constants.BASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()

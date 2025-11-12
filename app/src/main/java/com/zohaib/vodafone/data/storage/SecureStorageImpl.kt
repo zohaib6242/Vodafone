@@ -3,13 +3,14 @@ package com.zohaib.vodafone.data.storage
 import android.content.Context
 import androidx.security.crypto.EncryptedSharedPreferences
 import androidx.security.crypto.MasterKeys
+import com.zohaib.vodafone.common.Constants
 import com.zohaib.vodafone.domain.model.User
 import com.zohaib.vodafone.domain.repository.SecureStorage
 
 class SecureStorageImpl(context: Context) : SecureStorage {
     private val masterKeyAlias = MasterKeys.getOrCreate(MasterKeys.AES256_GCM_SPEC)
     private val prefs = EncryptedSharedPreferences.create(
-        "auth_prefs",
+        Constants.PREFS_NAME,
         masterKeyAlias,
         context,
         EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
